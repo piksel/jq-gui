@@ -252,9 +252,9 @@ static void debug_cb(void *data, jv input) {
 }
 
 #ifdef WIN32
-int umain(int argc, char* argv[]);
+int umain_jq(int argc, char* argv[]);
 
-int wmain(int argc, wchar_t* wargv[]) {
+int wmain_jq(int argc, wchar_t* wargv[]) {
   size_t arg_sz;
   char **argv = alloca(argc * sizeof(wchar_t*));
   for (int i = 0; i < argc; i++) {
@@ -267,9 +267,9 @@ int wmain(int argc, wchar_t* wargv[]) {
   return umain(argc, argv);
 }
 
-int umain(int argc, char* argv[]) {
+int umain_jq(int argc, char* argv[]) {
 #else /*}*/
-int main(int argc, char* argv[]) {
+int main_jq(int argc, char* argv[]) {
 #endif
   jq_state *jq = NULL;
   int ret = JQ_OK_NO_OUTPUT;

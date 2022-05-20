@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{0C4D6916-9C85-47E5-B6B6-FCC5CE4E383B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\builtin.c" />
+    <ClCompile Include="src\bytecode.c" />
+    <ClCompile Include="src\compile.c" />
+    <ClCompile Include="src\decnumber\decBasic.c" />
+    <ClCompile Include="src\decnumber\decCommon.c" />
+    <ClCompile Include="src\decnumber\decContext.c" />
+    <ClCompile Include="src\decnumber\decDouble.c" />
+    <ClCompile Include="src\decnumber\decimal128.c" />
+    <ClCompile Include="src\decnumber\decimal32.c" />
+    <ClCompile Include="src\decnumber\decimal64.c" />
+    <ClCompile Include="src\decnumber\decNumber.c" />
+    <ClCompile Include="src\decnumber\decPacked.c" />
+    <ClCompile Include="src\decnumber\decQuad.c" />
+    <ClCompile Include="src\decnumber\decSingle.c" />
+    <ClCompile Include="src\decnumber\example1.c" />
+    <ClCompile Include="src\decnumber\example2.c" />
+    <ClCompile Include="src\decnumber\example3.c" />
+    <ClCompile Include="src\decnumber\example4.c" />
+    <ClCompile Include="src\decnumber\example5.c" />
+    <ClCompile Include="src\decnumber\example6.c" />
+    <ClCompile Include="src\decnumber\example7.c" />
+    <ClCompile Include="src\decnumber\example8.c" />
+    <ClCompile Include="src\execute.c" />
+    <ClCompile Include="src\inject_errors.c" />
+    <ClCompile Include="src\jq_test.c" />
+    <ClCompile Include="src\jv.c" />
+    <ClCompile Include="src\jv_alloc.c" />
+    <ClCompile Include="src\jv_aux.c" />
+    <ClCompile Include="src\jv_dtoa.c" />
+    <ClCompile Include="src\jv_dtoa_tsd.c" />
+    <ClCompile Include="src\jv_file.c" />
+    <ClCompile Include="src\jv_parse.c" />
+    <ClCompile Include="src\jv_print.c" />
+    <ClCompile Include="src\jv_unicode.c" />
+    <ClCompile Include="src\lexer.c" />
+    <ClCompile Include="src\linker.c" />
+    <ClCompile Include="src\locfile.c" />
+    <ClCompile Include="src\main_jq.c" />
+    <ClCompile Include="src\parser.c" />
+    <ClCompile Include="src\util.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\builtin.h" />
+    <ClInclude Include="src\bytecode.h" />
+    <ClInclude Include="src\compile.h" />
+    <ClInclude Include="src\decnumber\decContext.h" />
+    <ClInclude Include="src\decnumber\decDouble.h" />
+    <ClInclude Include="src\decnumber\decDPD.h" />
+    <ClInclude Include="src\decnumber\decimal128.h" />
+    <ClInclude Include="src\decnumber\decimal32.h" />
+    <ClInclude Include="src\decnumber\decimal64.h" />
+    <ClInclude Include="src\decnumber\decNumber.h" />
+    <ClInclude Include="src\decnumber\decNumberLocal.h" />
+    <ClInclude Include="src\decnumber\decPacked.h" />
+    <ClInclude Include="src\decnumber\decQuad.h" />
+    <ClInclude Include="src\decnumber\decSingle.h" />
+    <ClInclude Include="src\exec_stack.h" />
+    <ClInclude Include="src\jq.h" />
+    <ClInclude Include="src\jq_parser.h" />
+    <ClInclude Include="src\jv.h" />
+    <ClInclude Include="src\jv_alloc.h" />
+    <ClInclude Include="src\jv_dtoa.h" />
+    <ClInclude Include="src\jv_dtoa_tsd.h" />
+    <ClInclude Include="src\jv_thread.h" />
+    <ClInclude Include="src\jv_type_private.h" />
+    <ClInclude Include="src\jv_unicode.h" />
+    <ClInclude Include="src\jv_utf8_tables.h" />
+    <ClInclude Include="src\lexer.h" />
+    <ClInclude Include="src\libm.h" />
+    <ClInclude Include="src\linker.h" />
+    <ClInclude Include="src\locfile.h" />
+    <ClInclude Include="src\opcode_list.h" />
+    <ClInclude Include="src\parser.h" />
+    <ClInclude Include="src\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\decnumber\ICU-license.html" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
